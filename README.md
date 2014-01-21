@@ -19,4 +19,5 @@ Just call .flextext() on your jQuery selected elements:
 ## Options
 Right now, options are just:
 
-* minFontSize -- integer, default 5
+* minFontSize -- integer, default 5.
+* extraSpace -- integer, default 0.  This will subtract the specified value of space (in pixels) from the width of the parent.  Use this if your text element is siblings to another element and you want your text to fill the remainder of the space.
