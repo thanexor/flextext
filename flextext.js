@@ -1,6 +1,6 @@
 /*
  * flextext
- * 1.0, January 14th, 2014
+ * 1.1, January 14th, 2014
  *
  * Incrementally downsize texts that would normally overflow their container.
  *
@@ -34,7 +34,7 @@
                 for (; currentFontSize >= opts.minFontSize; currentFontSize--) {
                     $this.css({'font-size': fontSize(currentFontSize) });
 
-                    if ($this.width() < $parent.width()) {
+                    if ($this.width() + opts.extraSpace < $parent.width()) {
                         break;
                     }
                 };
@@ -46,7 +46,8 @@
 
         $.fn.flextext.defaults = {
             allowBreaks: false,
-            minFontSize: 5
+            minFontSize: 5,
+            extraSpace: 0
         };
 
 }(jQuery));
